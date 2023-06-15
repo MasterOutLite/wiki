@@ -1,0 +1,73 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "service:run": "cross-env NODE_PATH=./src",
+    "service:cmd": "npm run service:run -- node ./cmd.js",
+    "start": "npm run service:run -- node ./index.js",
+    "dev": "npm run service:run -- nodemon ./index.js",
+    "lint": "eslint ./src/**/*.js ./cmd/**/*.js --cache --no-ignore",
+    "prettier:code": "prettier -w './src/**/*.js' && prettier -w './cmd/**/*.js'",
+    "prettier:code:win": "prettier -w %INIT_CWD%\"/src/**/*.js\" && prettier -w %INIT_CWD%\"/cmd/**/*.js\"",
+    "db:sync": "npm run service:cmd -- ./cmd/db/syncTables.js",
+    "db:drop": "npm run service:cmd -- ./cmd/db/dropTables.js",
+    "db:migration:run": "npm run service:run -- sequelize-cli db:migrate",
+    "db:migration:undo": "npm run service:run -- sequelize-cli db:migrate:undo",
+    "db:seed:all": "npm run service:run -- sequelize-cli db:seed:all",
+    "db:seed:undo": "npm run service:run -- sequelize-cli db:seed:undo",
+    "cron:run": "npm run service:cmd -- ./cmd/cron/index.js"
+  },
+  "dependencies": {
+    "@babel/core": "7.22.5",
+    "@babel/plugin-proposal-class-properties": "7.18.6",
+    "@babel/plugin-proposal-decorators": "7.22.5",
+    "@babel/plugin-transform-runtime": "7.22.5",
+    "@babel/preset-env": "7.22.5",
+    "@babel/register": "7.22.5",
+    "body-parser": "1.20.2",
+    "colors": "1.4.0",
+    "cookie-parser": "1.4.6",
+    "cors": "2.8.5",
+    "cross-env": "7.0.3",
+    "dotenv": "16.1.4",
+    "ejs": "3.1.9",
+    "express": "4.18.2",
+    "express-winston": "4.2.0",
+    "helmet": "7.0.0",
+    "joi": "17.9.2",
+    "jsonwebtoken": "9.0.0",
+    "lodash": "4.17.21",
+    "moment": "2.29.4",
+    "node-schedule": "2.1.1",
+    "pg": "8.11.0",
+    "pg-hstore": "2.3.4",
+    "sequelize": "6.32.0",
+    "sequelize-cli": "6.6.1",
+    "uuid": "9.0.0",
+    "winston": "3.9.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "7.22.5",
+    "@faker-js/faker": "8.0.2",
+    "eslint": "8.42.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-loader": "4.0.2",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-lodash": "7.4.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "husky": "8.0.3",
+    "isparta": "4.1.1",
+    "lint-staged": "13.2.2",
+    "mocha": "10.2.0",
+    "mrm": "4.1.14",
+    "nodemon": "2.0.22",
+    "prettier": "2.8.8"
+  },
+  "lint-staged": {
+    "*.{js,ts,md,json}": [
+      "prettier -w"
+    ]
+  }
+}

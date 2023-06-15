@@ -1,0 +1,8 @@
+    UI
+cd .\university-library-ui\
+yarn start
+
+API
+cd .\university-library-api\
+yarn dev
+

@@ -1,0 +1,78 @@
+@use './vars';
+
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --font-weight-light: 100;
+
+  // main colors
+  --color-primary: #116a87;
+  --color-primary-dark: #0b465a;
+  --color-primary-light: #178db4;
+  --color-secondary: #6c757d;
+  --color-secondary-dark: #545b62;
+  --color-secondary-light: #868e96;
+
+  // additions colors
+  --color-black: #000;
+  --color-white: #fff;
+  --color-blue: #2196f3;
+  --color-cyan: #17a2b8;
+  --color-grey: #656565;
+  --color-green: #37bc9b;
+  --color-indigo: #6610f2;
+  --color-inverse: #131e26;
+  --color-orange: #fd7e14;
+  --color-pink: #e83e8c;
+  --color-purple: #564aa3;
+  --color-danger: #b00020;
+  --color-red: #e1564c;
+  --color-teal: #20c997;
+  --color-info: #17a2b8;
+  --color-success: #27c24c;
+  --color-warning: #ffc107;
+  --color-yellow: #ffc107;
+
+  // light colors
+  --color-light: #f8f9fa;
+  --color-blue-light: #51adf6;
+  --color-cyan-light: #1fc8e3;
+  --color-grey-light: #efefef;
+  --color-green-light: #58ceb1;
+  --color-indigo-light: #8540f5;
+  --color-inverse-light: #243948;
+  --color-pink-light: #ed6ca7;
+  --color-orange-light: #fd9a47;
+  --color-purple-light: #7266ba;
+  --color-red-light: #e87f78;
+  --color-teal-light: #3ce0af;
+  --color-info-light: #1fc8e3;
+  --color-success-light: #43d967;
+  --color-warning-light: #ffce3a;
+  --color-yellow-light: #ffce3a;
+
+  // dark colors
+  --color-dark: #3a3f51;
+  --color-blue-dark: #0c7cd5;
+  --color-cyan-dark: #117a8b;
+  --color-grey-dark: #656565;
+  --color-green-dark: #2b957a;
+  --color-indigo-dark: #510bc4;
+  --color-inverse-dark: #020304;
+  --color-pink-dark: #d91a72;
+  --color-orange-dark: #dc6502;
+  --color-purple-dark: #433a80;
+  --color-red-dark: #d63024;
+  --color-teal-dark: #199d76;
+  --color-info-dark: #117a8b;
+  --color-success-dark: #1e983b;
+  --color-warning-dark: #d39e00;
+  --color-yellow-dark: #d39e00;
+
+  // element colors
+  --color-text: var(--color-dark);
+  --color-hover: #116a8709;
+  --color-background: #f5f7fa;
+}

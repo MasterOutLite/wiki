@@ -1,0 +1,29 @@
+{
+  "plugins": ["stylelint-scss", "stylelint-prettier"],
+  "extends": ["stylelint-config-standard-scss", "stylelint-config-standard", "stylelint-config-prettier"],
+  "rules": {
+    "prettier/prettier": true,
+    "at-rule-no-unknown": null,
+    "function-name-case": null,
+    "keyframes-name-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "property-no-vendor-prefix": null,
+    "no-eol-whitespace": null,
+    "no-descending-specificity": null,
+    "selector-id-pattern": "^[a-z][a-zA-Z0-9]+$|^[a-z][a-z0-9-]+$",
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$|^[a-z][a-z0-9-]+$",
+    "selector-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "scss/at-mixin-argumentless-call-parentheses": null,
+    "scss/dollar-variable-empty-line-before": null,
+    "scss/no-global-function-names": null,
+    "function-no-unknown": null,
+    "color-function-notation": null,
+    "no-invalid-position-at-import-rule": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global", "export"]
+      }
+    ]
+  }
+}

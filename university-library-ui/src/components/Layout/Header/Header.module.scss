@@ -1,0 +1,36 @@
+@use 'src/styles/mixins';
+
+$height: 70px;
+
+.root {
+  background-color: var(--color-primary);
+  height: $height;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.logo {
+  height: 100%;
+  pointer-events: none;
+  animation: logoSpin infinite 20s linear;
+}
+
+.title {
+  flex-grow: 1;
+  font-size: 2rem;
+  color: var(--color-white);
+  text-align: center;
+}
+
+@keyframes logoSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

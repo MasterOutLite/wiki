@@ -1,0 +1,20 @@
+@use 'src/styles/vars';
+@use 'src/styles/mixins';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin: 0 auto;
+  min-width: vars.$content-width;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  @include mixins.respond-less(vars.$screen-md) {
+    min-width: 100%;
+  }
+}
+
+.wrapper {
+  width: 100%;
+}

@@ -1,0 +1,20 @@
+.root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.postsContainer {
+  max-width: 800px;
+}
+
+.nav{
+  padding: 10px 0 30px 0;
+}
+
+.modal{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
